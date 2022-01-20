@@ -22,6 +22,9 @@
     height: 500px;
     border: silver;
     background-color: royalblue;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
 }
 
 #keyItems {
@@ -49,4 +52,12 @@
     width: 120px;
     height: 90px;
     background-color: yellowgreen;
+}
+
+/* ---------   Middle Screen   --------- */
+
+.txtingB {
+    width: 330px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
