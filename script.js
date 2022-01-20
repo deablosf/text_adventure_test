@@ -1,5 +1,13 @@
 let charaStats = {
-
+    strength: 10,
+    dexterity: 12,
+    constitution: 14,
+    wits: 16,
+    intelligence: 14,
+    charisma: 18,
+    inventory: {
+        potion: 2
+    }
 }
 
 let i = 0;
