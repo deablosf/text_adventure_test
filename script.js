@@ -1,4 +1,6 @@
 let charaStats = {
+    name: "",
+    age: 00,
     strength: 10,
     dexterity: 12,
     constitution: 14,
@@ -7,6 +9,12 @@ let charaStats = {
     charisma: 18,
     inventory: {
         potion: 2
+    },
+    equipment: {
+        weapon: {
+            name: "",
+            damage: 00,
+        }
     }
 }
 
