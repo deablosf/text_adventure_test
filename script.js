@@ -3,12 +3,12 @@
 let charaStats = {
     name: "",
     age: 00,
-    Physical: 10,
-    social: 12,
-    semantic: 14,
-    procedural: 16,
-    health: 14,
-    combat: 18,
+    Physical: 4,
+    social: 6,
+    semantic: 8,
+    procedural: 4,
+    health: 4,
+    combat: 4,
     practices: 10,
     inventory: {
         potion: 2
