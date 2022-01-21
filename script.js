@@ -1,3 +1,5 @@
+// Need to set up a way for he player to add their own name.
+
 let charaStats = {
     name: "",
     age: 00,
