@@ -41,6 +41,7 @@
     height: 90px;
     background-color: salmon;
     background-image: url(/ching-yeh-head.jpg);
+    background-size: 100% 100%;
 }
 
 #nameDots {
