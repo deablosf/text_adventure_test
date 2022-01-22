@@ -1,7 +1,7 @@
 // Need to set up a way for he player to add their own name.
 
 let charaStats = {
-    name: "",
+    name: "Billy D. Williams",
     age: 00,
     Physical: 4,
     social: 6,
@@ -20,6 +20,8 @@ let charaStats = {
         }
     }
 }
+
+document.getElementById("youN").innerText = charaStats.name;
 
 let i = 0;
 let speed = 50;
