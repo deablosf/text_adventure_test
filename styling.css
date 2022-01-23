@@ -45,10 +45,11 @@
 }
 
 #youN {
-    width: 160px;
+    width: 150px;
     border: solid thin whitesmoke;
     background-color: rgb(24, 21, 36);
     color: honeydew;
+    margin-left: 2px;
 }
 
 #nameDots {
@@ -61,11 +62,23 @@
     width: 120px;
     height: 90px;
     background-color: yellowgreen;
+    display: flex;
+    flex-direction: column;
+}
+
+#scrollSetting {
+    width: 110px;
+    height: 25px;
+    background-color: rosybrown;
+    align-self: center;
+    margin-top: 3px;
+    margin-bottom: 1px;
 }
 
 #actualStats {
     display: flex;
     flex-wrap: wrap;
+
 }
 
 .statButtonsIm {
@@ -73,6 +86,7 @@
     height: 20px;
     background-color: tomato;
     margin-top: 2px;
+    margin-left: 2px;
 }
 
 /* ---------   Middle Screen   --------- */
