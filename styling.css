@@ -63,6 +63,18 @@
     background-color: yellowgreen;
 }
 
+#actualStats {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.statButtonsIm {
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+    margin-top: 2px;
+}
+
 /* ---------   Middle Screen   --------- */
 
 #txtingB {
