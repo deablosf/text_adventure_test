@@ -23,7 +23,24 @@ let charaStats = {
     }
 }
 
+let state = {
+    statVisual: 1
+}
+
+let floater = document.getElementById("floater");
 document.getElementById("youN").innerText = charaStats.name;
+
+let statViewer = () => {
+    if (state.statVisual == 1) {
+        floater.classList.remove("invisible");
+        floater.classList.add("statBrakedown");
+        state.statVisual = 2;
+    }else if (state.statVisual == 2) {
+        floater.classList.remove("statBrakedown");
+        floater.classList.add("invisible");
+        state.statVisual = 1;
+    }
+}
 
 let i = 0;
 let speed = 50;
@@ -34,6 +51,7 @@ const typeWriter = () => {
         i++;
         setTimeout(typeWriter, speed)
     }
+    
 }
 
 

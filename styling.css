@@ -103,3 +103,20 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+
+
+
+/* **********  Floater  ************* */
+
+.invisible{
+    display: none;
+  }
+
+.statBrakedown {
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    grid-column: 1/5;
+    grid-row: 7;
+    justify-self: center;
+}
