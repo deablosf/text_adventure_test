@@ -4,7 +4,7 @@ let charaStats = {
     name: "Billy D. Williams",
     age: 00,
     traits: {
-        Physical: 4,
+        physical: 4,
         social: 6,
         semantic: 8,
         procedural: 4,
@@ -23,6 +23,16 @@ let charaStats = {
     }
 }
 
+const statDetails = {
+    physical: "Running Jumping lifting.",
+    social: "Feeling people out, making people feel yOu.",
+    semantic: "Logic based skills",
+    procedural: "Learned skills focused on muscle memory",
+    health: "Your mind and body's health and durability",
+    combat: "Can you throw more than a tantrum",
+    practices: "Knowledge you've picked up",
+}
+
 let state = {
     statVisual: 1
 }
@@ -30,12 +40,14 @@ let state = {
 let floater = document.getElementById("floater");
 document.getElementById("youN").innerText = charaStats.name;
 
-let statViewer = () => {
+let statViewer = (x) => {
     if (state.statVisual == 1) {
         floater.onclick = statViewer
         floater.classList.remove("invisible");
         floater.classList.add("statBrakedown");
+        floater.innerHTML = '<div class="statTop">' + `${x}` + '</div> <div>' + `${statDetails[x]}` + '</div>'
         state.statVisual = 2;
+        console.log(x)
     }else if (state.statVisual == 2) {
         floater.classList.remove("statBrakedown");
         floater.classList.add("invisible");
