@@ -32,6 +32,7 @@ document.getElementById("youN").innerText = charaStats.name;
 
 let statViewer = () => {
     if (state.statVisual == 1) {
+        floater.onclick = statViewer
         floater.classList.remove("invisible");
         floater.classList.add("statBrakedown");
         state.statVisual = 2;
