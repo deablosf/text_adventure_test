@@ -71,9 +71,6 @@ const typeWriter = () => {
     }
 }
 
-
-
-
 let statMapper = () => {
     statsList = Object.keys(charaStats.traits).map((key) => (key))
     document.getElementById("actualStats").innerHTML = statsList.map(stat => 
