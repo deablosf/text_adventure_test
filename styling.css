@@ -21,12 +21,14 @@
 }
 
 #progressBar {
-    width: 350px;
-    height: 10px;
+    width: 344px;
+    height: 4px;
+    background-color: gold;
+    border: solid black;
     border-width: 2px;
     grid-column: 1;
-    grid-row: 1;
-    
+    grid-row: 2;
+    align-self: end;
 }
 
 #mainText {
