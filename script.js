@@ -38,6 +38,7 @@ let state = {
 }
 
 let floater = document.getElementById("floater");
+let progress = document.getElementById("progressBar");
 document.getElementById("youN").innerText = charaStats.name;
 
 let statViewer = (x) => {
@@ -64,8 +65,9 @@ const typeWriter = () => {
         i++;
         setTimeout(typeWriter, speed)
     }
-    
 }
+
+
 
 
 let statMapper = () => {
