@@ -3,7 +3,6 @@
 #mainScreen {
     width: 350px;
     height: 700px;
-    border: solid hotpink;
     background-color: rgb(32, 28, 48);
     display: grid;
     grid-auto-columns: 100px;
@@ -13,7 +12,6 @@
 #topScreen {
     width: 350px;
     height: 100px;
-    border: chocolate;
     background-color: rgb(32, 28, 48);
     display: flex;
     grid-column: 1;
@@ -21,7 +19,7 @@
 }
 
 #progressBar {
-    width: 344px;
+    width: 346px;
     height: 4px;
     background-color: gray;
     border: solid black;
@@ -40,8 +38,7 @@
 #mainText {
     width: 350px;
     height: 500px;
-    border: silver;
-    background-color: royalblue;
+    background-color: rgb(32, 28, 48);
     color: whitesmoke;
     display: flex;
     flex-direction: column;
@@ -53,7 +50,7 @@
     width: 350px;
     height: 100px;
     border: dodgerblue;
-    background-color: brown;
+    background-color: rgb(44, 38, 66);
     grid-column: 1;
     grid-row: 13;
 }
