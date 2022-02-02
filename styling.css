@@ -20,6 +20,15 @@
     grid-row: 1;
 }
 
+#progressBar {
+    width: 350px;
+    height: 10px;
+    border-width: 2px;
+    grid-column: 1;
+    grid-row: 1;
+    
+}
+
 #mainText {
     width: 350px;
     height: 500px;

@@ -38,7 +38,7 @@ let state = {
 }
 
 let floater = document.getElementById("floater");
-let progress = document.getElementById("progressBar");
+let progress = document.getElementById("progressFiller");
 document.getElementById("youN").innerText = charaStats.name;
 
 let statViewer = (x) => {
