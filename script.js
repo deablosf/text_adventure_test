@@ -34,12 +34,16 @@ const statDetails = {
 }
 
 let state = {
-    statVisual: 1
+    statVisual: 1,
+    progress: "3px"
 }
 
 let floater = document.getElementById("floater");
 let progress = document.getElementById("progressFiller");
 document.getElementById("youN").innerText = charaStats.name;
+
+progress.style.width = state.progress;
+
 
 let statViewer = (x) => {
     if (state.statVisual == 1) {

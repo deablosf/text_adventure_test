@@ -23,12 +23,18 @@
 #progressBar {
     width: 344px;
     height: 4px;
-    background-color: gold;
+    background-color: gray;
     border: solid black;
     border-width: 2px;
     grid-column: 1;
     grid-row: 2;
     align-self: end;
+    display: flex;
+}
+
+#progressFiller {
+    background-color: green;
+    height: 4px;
 }
 
 #mainText {
@@ -134,6 +140,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#sqaure {
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid red;
 }
 
 .statTop {
