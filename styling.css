@@ -46,15 +46,6 @@
     grid-row: 3;
 }
 
-#keyItems {
-    width: 350px;
-    height: 100px;
-    border: dodgerblue;
-    background-color: rgb(44, 38, 66);
-    grid-column: 1;
-    grid-row: 13;
-}
-
 /* ---------   TOP Screen   --------- */
 
 #face {
@@ -118,7 +109,15 @@
     margin-right: 10px;
 }
 
+/* ---------   Nottom Screen   --------- */
 
+#keyItems {
+    width: 350px;
+    height: 100px;
+    background-color: rgb(44, 38, 66);
+    grid-column: 1;
+    grid-row: 13;
+}
 
 /* **********  Floater  ************* */
 
