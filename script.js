@@ -74,7 +74,7 @@ const typeWriter = () => {
 let statMapper = () => {
     statsList = Object.keys(charaStats.traits).map((key) => (key))
     document.getElementById("actualStats").innerHTML = statsList.map(stat => 
-        '<div id="' + `'${stat}'` + 'Image" class="statButtonsIm" onclick="statViewer(' + `'${stat}'` + ')"></div>'
+        '<div id="' + `${stat}` + 'Image" class="statButtonsIm" onclick="statViewer(' + `'${stat}'` + ')"></div>'
         + '<div id="' + `'${stat}'` + '" class="statButtons" onclick="statViewer(' + `'${stat}'` + ')">' + `${charaStats.traits[stat]}` + '</div>'
         ).join('');
         console.log("working")

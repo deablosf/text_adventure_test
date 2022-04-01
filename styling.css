@@ -78,6 +78,11 @@
     flex-direction: column;
 }
 
+#socialImage {
+    background-image: url(/mouth-tongue.png);
+    background-size: 100% 100%;
+}
+
 #scrollSetting {
     width: 110px;
     height: 25px;
