@@ -67,7 +67,7 @@
 #nameDots {
     width: 170px;
     height: 90px;
-    /* background-color: fuchsia; */
+    background-color: fuchsia;
 }
 
 #settingStats {
@@ -123,9 +123,9 @@
 }
 
 .groober {
-    height: 75px;
-    width: 75px;
-    background-color: greenyellow;
+    height: 60px;
+    width: 60px;
+    background-size: 100% 100%;
 }
 
 /* **********  Floater  ************* */
