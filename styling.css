@@ -78,8 +78,38 @@
     flex-direction: column;
 }
 
+#physicalImage {
+    background-image: url(/bicep.png);
+    background-size: 100% 100%;
+}
+
 #socialImage {
     background-image: url(/mouth-tongue.png);
+    background-size: 100% 100%;
+}
+
+#semanticImage {
+    background-image: url(/creative-brain.png);
+    background-size: 100% 100%;
+}
+
+#proceduralImage {
+    background-image: url(/pro-finger.png);
+    background-size: 100% 100%;
+}
+
+#healthImage {
+    background-image: url(/healthy.png);
+    background-size: 100% 100%;
+}
+
+#combatImage {
+    background-image: url(/combat.png);
+    background-size: 100% 100%;
+}
+
+#practicesImage {
+    background-image: url(/Practices.png);
     background-size: 100% 100%;
 }
 
@@ -101,7 +131,6 @@
 .statButtonsIm {
     width: 20px;
     height: 20px;
-    background-color: tomato;
     margin-top: 2px;
     margin-left: 2px;
 }
