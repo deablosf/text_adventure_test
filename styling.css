@@ -79,27 +79,27 @@
 }
 
 #physicalImage {
-    background-image: url(/bicep.png);
+    background-image: url(/physical.png);
     background-size: 100% 100%;
 }
 
 #socialImage {
-    background-image: url(/mouth-tongue.png);
+    background-image: url(/social.png);
     background-size: 100% 100%;
 }
 
 #semanticImage {
-    background-image: url(/creative-brain.png);
+    background-image: url(/semantic.png);
     background-size: 100% 100%;
 }
 
 #proceduralImage {
-    background-image: url(/pro-finger.png);
+    background-image: url(/procedural.png);
     background-size: 100% 100%;
 }
 
 #healthImage {
-    background-image: url(/healthy.png);
+    background-image: url(/health.png);
     background-size: 100% 100%;
 }
 
@@ -109,7 +109,7 @@
 }
 
 #practicesImage {
-    background-image: url(/Practices.png);
+    background-image: url(/practices.png);
     background-size: 100% 100%;
 }
 
@@ -194,3 +194,32 @@
     width: 130px;
     text-align: center;
 }
+
+#hexagon {
+    width: 25px;
+    height: 13.735px;
+    background: red;
+    position: relative;
+  }
+  #hexagon::before {
+    content: "";
+    position: absolute;
+    top: -7.8675px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 12.5px solid transparent;
+    border-right: 12.5px solid transparent;
+    border-bottom: 7.8675px solid red;
+  }
+  #hexagon::after {
+    content: "";
+    position: absolute;
+    bottom: -7.8675px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 12.5px solid transparent;
+    border-right: 12.5px solid transparent;
+    border-top: 7.8675px solid red;
+  }
