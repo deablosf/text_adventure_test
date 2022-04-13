@@ -195,6 +195,13 @@
     text-align: center;
 }
 
+.statBottom {
+    height: 130px;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
 #hexagon {
     width: 25px;
     height: 13.735px;

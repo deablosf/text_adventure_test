@@ -50,7 +50,7 @@ let statViewer = (x) => {
         floater.onclick = statViewer
         floater.classList.remove("invisible");
         floater.classList.add("statBrakedown");
-        floater.innerHTML = '<div class="statTop">' + `${x}` + '</div> <div>' + `${statDetails[x]}` + '</div>'
+        floater.innerHTML = '<div class="statTop">' + `${x}` + '</div> <div class="statBottom" style="background-image: url(' + `${x}` + '.png);">' + `${statDetails[x]}` + '</div>'
         state.statVisual = 2;
         console.log(x)
     }else if (state.statVisual == 2) {
