@@ -207,6 +207,8 @@
     height: 13.735px;
     background: red;
     position: relative;
+    display: flex;
+    justify-content: center;
   }
   #hexagon::before {
     content: "";
@@ -229,4 +231,11 @@
     border-left: 12.5px solid transparent;
     border-right: 12.5px solid transparent;
     border-top: 7.8675px solid red;
+  }
+
+  #circle {
+    width: 15px;
+    height: 15px;
+    background: blue;
+    border-radius: 50%;
   }
