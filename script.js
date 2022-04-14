@@ -3,6 +3,7 @@
 let charaStats = {
     name: "Billy D. Williams",
     age: 00,
+    abilityPoints: 6,
     traits: {
         physical: 4,
         social: 6,
@@ -26,9 +27,14 @@ let charaStats = {
 
 
 const healthMaker = () => {
-    console.log(charaStats.traits.health)
     for (i = 1; i <= charaStats.traits.health; i++) {
-        healthDots.innerHTML += '<div class="mainCircle"> <div class="secondCircle" id="circle' + `${i}` + '"></div> </div>'
+        healthDots.innerHTML += '<div class="healthCircle"> <div class="secondCircle" id="circle' + `${i}` + '"></div> </div>'
+    }
+}
+
+const abilityMaker = () => {
+    for (i = 1; i <= charaStats.abilityPoints; i++) {
+        abilityDots.innerHTML += '<div class="abilityCircle"> <div class="secondCircle" id="circle' + `${i}` + '"></div> </div>'
     }
 }
 
@@ -50,6 +56,7 @@ let state = {
 let floater = document.getElementById("floater");
 let progress = document.getElementById("progressFiller");
 let healthDots = document.getElementById("healthDots");
+let abilityDots = document.getElementById("abilityDots")
 document.getElementById("youN").innerText = charaStats.name;
 
 progress.style.width = state.progress;
@@ -93,3 +100,4 @@ let statMapper = () => {
 typeWriter()
 statMapper()
 healthMaker()
+abilityMaker()
