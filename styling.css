@@ -70,6 +70,11 @@
     background-color: fuchsia;
 }
 
+#healthDots {
+    display: flex;
+    gap: 5px;
+}
+
 #settingStats {
     width: 120px;
     height: 90px;
@@ -202,40 +207,19 @@
     background-position: center bottom;
 }
 
-#hexagon {
-    width: 25px;
-    height: 13.735px;
-    background: red;
-    position: relative;
+.mainCircle {
+    width: 20px;
+    height: 20px;
+    background: silver;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
   }
-  #hexagon::before {
-    content: "";
-    position: absolute;
-    top: -7.8675px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 12.5px solid transparent;
-    border-right: 12.5px solid transparent;
-    border-bottom: 7.8675px solid red;
-  }
-  #hexagon::after {
-    content: "";
-    position: absolute;
-    bottom: -7.8675px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 12.5px solid transparent;
-    border-right: 12.5px solid transparent;
-    border-top: 7.8675px solid red;
-  }
 
-  #circle {
+.secondCircle {
     width: 15px;
     height: 15px;
     background: blue;
     border-radius: 50%;
+    align-self: center;
   }

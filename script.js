@@ -23,6 +23,15 @@ let charaStats = {
     }
 }
 
+
+
+const healthMaker = () => {
+    console.log(charaStats.traits.health)
+    for (i = 1; i <= charaStats.traits.health; i++) {
+        healthDots.innerHTML += '<div class="mainCircle"> <div class="secondCircle" id="circle' + `${i}` + '"></div> </div>'
+    }
+}
+
 const statDetails = {
     physical: "Running Jumping lifting.",
     social: "Feeling people out, making people feel yOu.",
@@ -40,6 +49,7 @@ let state = {
 
 let floater = document.getElementById("floater");
 let progress = document.getElementById("progressFiller");
+let healthDots = document.getElementById("healthDots");
 document.getElementById("youN").innerText = charaStats.name;
 
 progress.style.width = state.progress;
@@ -82,3 +92,4 @@ let statMapper = () => {
 
 typeWriter()
 statMapper()
+healthMaker()
