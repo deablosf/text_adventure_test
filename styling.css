@@ -130,16 +130,34 @@
 
 #scrollSetting {
     width: 130px;
-    height: 25px;
-    background-color: rosybrown;
+    height: 30px;
+    /* background-color: rosybrown; */
     align-self: center;
-    margin-top: 3px;
-    margin-bottom: 1px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#scrolly {
+    width: 80px;
+    height: 40px;
+    background-image: url(/scroll.png);
+    background-size: 100% 100%;
+}
+
+#geary {
+    height: 30px;
+    width: 30px;
+    background-image: url(/gear.png);
+    background-size: 100% 100%;
+    margin-top: 2px;
 }
 
 #actualStats {
     display: flex;
     flex-wrap: wrap;
+    gap: 2px;
 }
 
 .statButtonsIm {
