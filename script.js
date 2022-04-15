@@ -55,6 +55,8 @@ let floater = document.getElementById("floater");
 let progress = document.getElementById("progressFiller");
 let healthDots = document.getElementById("healthDots");
 let abilityDots = document.getElementById("abilityDots");
+let txtingB = document.getElementById("txtingB");
+let Boottons = document.getElementById("Boottons")
 document.getElementById("youN").innerText = charaStats.name;
 
 progress.style.width = state.progress;
@@ -76,14 +78,18 @@ let statViewer = (x) => {
 };
 
 let i = 0;
-let speed = 50;
+let speed = 20;
 let txt = "Testing Testing 1 2! Here again at the crispy cream!";
 const typeWriter = () => {
     if (i < txt.length) {
-        document.getElementById("txtingB").innerHTML += txt.charAt(i);
+        txtingB.innerHTML += txt.charAt(i);
         i++;
         setTimeout(typeWriter, speed)
+    } else {
+        console.log(txt)
+        i = 0
     }
+    
 };
 
 let statMapper = () => {
@@ -100,10 +106,12 @@ let showTextNode = (textNodeIndex) => {
     //textNode's value is set to be the object with the matching id inside of the array textNodes 
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     //This line takes the text from inside the "created" object textNode and places it in the html in the div value of textElement 
-    textElement.innerText = textNode.text;
+    txt = textNode.text
+    typeWriter()
+    //txtingB.innerText = textNode.text;
     //This removes the previous options that may be there from the last textNode and will only stop once all firstChild are gone
-    while (optionButtonsElement.firstChild){
-        optionButtonsElement.removeChild(optionButtonsElement.firstChild)
+    while (Boottons.firstChild){
+        Boottons.removeChild(Boottons.firstChild)
     }
     //This creates the option buttons by using forEach to go througth the textNode options and build a button for each
     textNode.options.forEach(option => {
@@ -112,7 +120,7 @@ let showTextNode = (textNodeIndex) => {
             button.innerText = option.text
             button.classList.add('btn')
             button.addEventListener('click', () => selectOption(option))
-            optionButtonsElement.appendChild(button)
+            Boottons.appendChild(button)
         }
     })
     //Allows a fuction to be stored and used on specific textNodes
@@ -128,6 +136,7 @@ const showOption = (option) => {
     //Selects the next path in the adventure
 const selectOption = (option) => {
     const nextTextNodeId = option.nextText
+    txtingB.innerHTML = "";
     if (nextTextNodeId <= 0) {
         return startGame()
     }
@@ -139,7 +148,7 @@ const selectOption = (option) => {
 const textNodes = [
     {
         id: 1,
-        text: "",
+        text: " Rumbling, dark, cold, suffocating, you struggle to stretch out your arms. You feel your hand burst out into open space. You wriggle towards the empty space, your head breaches the surface. With a bit more struggling you’re able to pull your body out of what you can now tell is a thick Ultisols mub. The rain is coming down in obese droplets, your vision is better than you believe it should for this type of stormy night.",
         options: [
             {
                 text: 'Continue',
@@ -149,15 +158,19 @@ const textNodes = [
     },
     {
         id: 2,
-        text: "",
+        text: "You rech, expelling dark red mub from your lungs and finally inhale. You onlynoticed now that you haven't beenbreathing. It's night and stormy but you can still see somewhat. But howcould you without street lights, what are street lights. Your head ppounds as lightening streaks through the sky.",
         // sideEffect: () => {},
         options: [
             {
-                text: "Continue",
+                text: "Look around",
                 //requiredState: (currentState) => currentState.blueGoo,
                 //setState: {bluegoo: false, sword: true },
                 nextText: 3
             },
+            {
+                text: "Look In the hole",
+                nextText: 4
+            }
             // {
             //     text: 'Trade the goo for a shield',
             //     requiredState: (currentState) => currentState.blueGoo,
@@ -167,11 +180,20 @@ const textNodes = [
             
         ]
     },
+    {
+        id: 3,
+        text: "Dim",
+        options: [
+            {
+                text: "Look at the hole",
+                nextText: 4
+            }
+        ]
+    }
 ]
 
 
-
-typeWriter()
 statMapper()
 healthMaker()
 abilityMaker()
+showTextNode(1)
