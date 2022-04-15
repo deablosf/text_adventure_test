@@ -31,7 +31,7 @@ let state = {
 
 const healthMaker = () => {
     for (i = 1; i <= charaStats.traits.health; i++) {
-        healthDots.innerHTML += '<div class="healthCircle"> <div class="secondCircle" id="circle' + `${i}` + '"></div> </div>'
+        healthDots.innerHTML += '<div class="healthCircle"> <div class="firstaryCircle" id="circle' + `${i}` + '"></div> </div>'
     }
 };
 
@@ -107,7 +107,6 @@ let showTextNode = (textNodeIndex) => {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     //This line takes the text from inside the "created" object textNode and places it in the html in the div value of textElement 
     txt = textNode.text
-    typeWriter()
     //txtingB.innerText = textNode.text;
     //This removes the previous options that may be there from the last textNode and will only stop once all firstChild are gone
     while (Boottons.firstChild){
@@ -127,6 +126,7 @@ let showTextNode = (textNodeIndex) => {
     if (textNode.sideEffect) {
         textNode.sideEffect();
     }
+    typeWriter()
 
 };
     //Checks if an option has a required State and if that stateis met. If not the option will not show
@@ -148,7 +148,7 @@ const selectOption = (option) => {
 const textNodes = [
     {
         id: 1,
-        text: " Rumbling, dark, cold, suffocating, you struggle to stretch out your arms. You feel your hand burst out into open space. You wriggle towards the empty space, your head breaches the surface. With a bit more struggling you’re able to pull your body out of what you can now tell is a thick Ultisols mub. The rain is coming down in obese droplets, your vision is better than you believe it should for this type of stormy night.",
+        text: "       Rumbling, dark, cold, suffocating, you struggle to stretch out your arms. You feel your hand burst out into open space. You wriggle towards the empty space, your head breaches the surface. With a bit more struggling you’re able to pull your body out of what you can now tell is a thick Ultisols mub. The rain is coming down in obese droplets, your vision is better than you believe it should for this type of stormy night.",
         options: [
             {
                 text: 'Continue',

@@ -12,7 +12,7 @@
 #topScreen {
     width: 400px;
     height: 100px;
-    background-color: rgb(32, 28, 48);
+    background-color: rgb(44, 38, 66);
     display: flex;
     grid-column: 1;
     grid-row: 1;
@@ -87,7 +87,7 @@
 #settingStats {
     width: 140px;
     height: 100px;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     display: flex;
     flex-direction: column;
 }
@@ -174,6 +174,13 @@
     margin-right: 10px;
 }
 
+.btn {
+    color: aliceblue;
+    background: none;
+    border: solid 2px aliceblue;
+    margin: 5px;
+}
+
 /* ---------   Bottom Screen   --------- */
 
 #keyItems {
@@ -253,10 +260,20 @@
     margin-top: 5px;
 }
 
+.firstaryCircle {
+    width: 18px;
+    height: 18px;
+    background: rgb(240,124,162);
+    background: linear-gradient(220deg, rgba(240,124,162,1) 0%, rgba(253,29,66,1) 25%, rgba(232,149,159,1) 100%);
+    border-radius: 50%;
+    align-self: center;
+}
+
 .secondCircle {
     width: 18px;
     height: 18px;
-    background: blue;
+    background: rgb(177,141,201);
+    background: linear-gradient(152deg, rgba(177,141,201,1) 0%, rgba(204,29,253,1) 25%, rgba(209,149,232,1) 100%);
     border-radius: 50%;
     align-self: center;
 }
