@@ -24,6 +24,11 @@ let charaStats = {
     }
 };
 
+let state = {
+    statVisual: 1,
+    progress: "3px"
+};
+
 const healthMaker = () => {
     for (i = 1; i <= charaStats.traits.health; i++) {
         healthDots.innerHTML += '<div class="healthCircle"> <div class="secondCircle" id="circle' + `${i}` + '"></div> </div>'
@@ -44,11 +49,6 @@ const statDetails = {
     health: "Your mind and body's health and durability",
     combat: "Can you throw more than a tantrum",
     practices: "Knowledge you've picked up",
-};
-
-let state = {
-    statVisual: 1,
-    progress: "3px"
 };
 
 let floater = document.getElementById("floater");
@@ -135,6 +135,39 @@ const selectOption = (option) => {
     state = Object.assign(state, option.setState)
     showTextNode(nextTextNodeId)
 }
+
+const textNodes = [
+    {
+        id: 1,
+        text: "",
+        options: [
+            {
+                text: 'Continue',
+                nextText: 2
+            }
+        ]
+    },
+    {
+        id: 2,
+        text: "",
+        // sideEffect: () => {},
+        options: [
+            {
+                text: "Continue",
+                //requiredState: (currentState) => currentState.blueGoo,
+                //setState: {bluegoo: false, sword: true },
+                nextText: 3
+            },
+            // {
+            //     text: 'Trade the goo for a shield',
+            //     requiredState: (currentState) => currentState.blueGoo,
+            //     setState: {bluegoo: false, shield: true },
+            //     nextText: 3
+            // },
+            
+        ]
+    },
+]
 
 
 
