@@ -7,11 +7,11 @@ let charaStats = {
     traits: {
         physical: 4,
         social: 6,
-        semantic: 8,
-        procedural: 4,
+        semantic: 6,
+        procedural: 8,
         health: 4,
         combat: 4,
-        practices: 10,
+        practices: 8,
     },
     inventory: {
         potion: 2
@@ -19,14 +19,19 @@ let charaStats = {
     equipment: {
         weapon: {
             name: "",
-            damage: 00,
+            damage: 00
+        },
+        armor: {
+            name: "",
+            duribility: 00
         }
     }
 };
 
 let state = {
     statVisual: 1,
-    progress: "3px"
+    progress: "3px",
+    didAll: false
 };
 
 const healthMaker = () => {
@@ -158,7 +163,7 @@ const textNodes = [
     },
     {
         id: 2,
-        text: "You rech, expelling dark red mub from your lungs and finally inhale. You onlynoticed now that you haven't beenbreathing. It's night and stormy but you can still see somewhat. But howcould you without street lights, what are street lights. Your head ppounds as lightening streaks through the sky.",
+        text: "Before your mind could wrap itself around that thought; You vomit, expelling dark red mub from your lungs and finally inhale. You only now noticed that you haven't been breathing. Your head pounds as a streak of lightening cuts through the sky.",
         // sideEffect: () => {},
         options: [
             {
@@ -169,6 +174,15 @@ const textNodes = [
             },
             {
                 text: "Look In the hole",
+                nextText: 4
+            },
+            {
+                text: "Chech Yourself",
+                nextText: 5
+            },
+            {
+                text: "Look In the hole",
+                requiredState: (currentState) => currentState.didAll,
                 nextText: 4
             }
             // {
@@ -182,7 +196,7 @@ const textNodes = [
     },
     {
         id: 3,
-        text: "Dim",
+        text: "Dim shapes, trees pretty widely spaced. About half of the tree's roots are exposed; hard rain and run off has washed away a lot of dirt. The trees look like their planted on top of cages of roots.",
         options: [
             {
                 text: "Look at the hole",
